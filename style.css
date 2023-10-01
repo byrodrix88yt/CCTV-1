@@ -56,6 +56,22 @@ body {
     text-decoration: none;
     color: #ffffff; /* Color del texto del botón */
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+
+}
+.boton-custom3 {
+    position: fixed;
+    bottom: 41px; /* Puedes ajustar la posición vertical según tus preferencias */
+    left: 410px; /* Puedes ajustar la posición horizontal según tus preferencias */
+    background-color: transparent; /* Color de fondo del botón */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+}
+
+.boton-custom3 a {
+    text-decoration: none;
+    color: #ffffff; /* Color del texto del botón */
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
 }
 
 @font-face {
@@ -63,4 +79,32 @@ body {
     src: url('fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Cambia la ruta y el formato según tu fuente */
     font-weight: normal;
     font-style: normal;
+}
+
+.inicio-gif {
+    position: fixed;
+    top: 0;
+    left: 200;
+    width: 160%;
+    height: 160%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: fadeOut 0.2s ease-out 1s forwards; /* Animación de desvanecimiento */
+}
+
+.inicio-gif img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
