@@ -1,0 +1,124 @@
+/* Estilos generales de la página */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Estilos del fondo GIF */
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/camera_45.gif'); /* Cambia 'fondo.gif' por la URL de tu GIF */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Estilos del botón personalizado */
+.boton-custom {
+    position: fixed;
+    bottom: 20px; /* Puedes ajustar la posición vertical según tus preferencias */
+    left: 20px; /* Puedes ajustar la posición horizontal según tus preferencias */
+    background-color: transparent; /* Color de fondo del botón */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+}
+
+.boton-custom a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Color del texto del botón */
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+}
+
+.boton-custom img {
+    max-width: 450px; /* Ancho máximo de la imagen */
+    margin-right: -50px; /* Espacio entre la imagen y el texto */
+}
+
+.boton-custom2 {
+    position: fixed;
+    bottom: 41px; /* Puedes ajustar la posición vertical según tus preferencias */
+    left: 285px; /* Puedes ajustar la posición horizontal según tus preferencias */
+    background-color: transparent; /* Color de fondo del botón */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+}
+
+.boton-custom2 a {
+    text-decoration: none;
+    color: #ffffff; /* Color del texto del botón */
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+    font-size: 24px; /* Tamaño de fuente más grande */
+
+}
+.boton-custom3 {
+    position: fixed;
+    bottom: 41px; /* Puedes ajustar la posición vertical según tus preferencias */
+    left: 410px; /* Puedes ajustar la posición horizontal según tus preferencias */
+    background-color: transparent; /* Color de fondo del botón */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+}
+
+.boton-custom3 a {
+    text-decoration: none;
+    color: #ffffff; /* Color del texto del botón */
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+    font-size: 24px; /* Tamaño de fuente más grande */
+}
+
+@font-face {
+    font-family: 'vhs'; /* Un nombre para tu fuente personalizada */
+    src: url('fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Cambia la ruta y el formato según tu fuente */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.inicio-gif {
+    position: fixed;
+    top: 0;
+    left: 200;
+    width: 160%;
+    height: 160%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: fadeOut 0.2s ease-out 1s forwards; /* Animación de desvanecimiento */
+}
+
+.inicio-gif img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.reloj {
+    position: fixed;
+    top: 10px; /* Ajusta la posición vertical según tus preferencias */
+    right: 10px; /* Ajusta la posición horizontal según tus preferencias */
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
+    font-size: 34px; /* Tamaño de fuente más grande */
+}
