@@ -1,4 +1,4 @@
-/* Estilos generales de la p醙ina */
+/* Estilos generales de la p谩gina */
 body {
     margin: 0;
     padding: 0;
@@ -18,12 +18,12 @@ body {
     background-attachment: fixed;
 }
 
-/* Estilos del bot髇 personalizado */
+/* Estilos del bot贸n personalizado */
 .boton-custom {
     position: fixed;
-    bottom: 20px; /* Puedes ajustar la posici髇 vertical seg鷑 tus preferencias */
-    left: 20px; /* Puedes ajustar la posici髇 horizontal seg鷑 tus preferencias */
-    background-color: transparent; /* Color de fondo del bot髇 */
+    bottom: 20px; /* Puedes ajustar la posici贸n vertical seg煤n tus preferencias */
+    left: 20px; /* Puedes ajustar la posici贸n horizontal seg煤n tus preferencias */
+    background-color: transparent; /* Color de fondo del bot贸n */
     padding: 10px;
     border-radius: 5px;
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
@@ -33,20 +33,20 @@ body {
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: #ffffff; /* Color del texto del bot髇 */
+    color: #ffffff; /* Color del texto del bot贸n */
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
 }
 
 .boton-custom img {
-    max-width: 450px; /* Ancho m醲imo de la imagen */
+    max-width: 450px; /* Ancho m谩ximo de la imagen */
     margin-right: -50px; /* Espacio entre la imagen y el texto */
 }
 
 .boton-custom2 {
     position: fixed;
-    bottom: 41px; /* Puedes ajustar la posici髇 vertical seg鷑 tus preferencias */
-    left: 285px; /* Puedes ajustar la posici髇 horizontal seg鷑 tus preferencias */
-    background-color: transparent; /* Color de fondo del bot髇 */
+    bottom: 41px; /* Puedes ajustar la posici贸n vertical seg煤n tus preferencias */
+    left: 285px; /* Puedes ajustar la posici贸n horizontal seg煤n tus preferencias */
+    background-color: transparent; /* Color de fondo del bot贸n */
     padding: 10px;
     border-radius: 5px;
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
@@ -54,16 +54,16 @@ body {
 
 .boton-custom2 a {
     text-decoration: none;
-    color: #ffffff; /* Color del texto del bot髇 */
+    color: #ffffff; /* Color del texto del bot贸n */
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
-    font-size: 24px; /* Tama駉 de fuente m醩 grande */
+    font-size: 24px; /* Tama帽o de fuente m谩s grande */
 
 }
 .boton-custom3 {
     position: fixed;
-    bottom: 41px; /* Puedes ajustar la posici髇 vertical seg鷑 tus preferencias */
-    left: 410px; /* Puedes ajustar la posici髇 horizontal seg鷑 tus preferencias */
-    background-color: transparent; /* Color de fondo del bot髇 */
+    bottom: 41px; /* Puedes ajustar la posici贸n vertical seg煤n tus preferencias */
+    left: 410px; /* Puedes ajustar la posici贸n horizontal seg煤n tus preferencias */
+    background-color: transparent; /* Color de fondo del bot贸n */
     padding: 10px;
     border-radius: 5px;
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
@@ -71,14 +71,14 @@ body {
 
 .boton-custom3 a {
     text-decoration: none;
-    color: #ffffff; /* Color del texto del bot髇 */
+    color: #ffffff; /* Color del texto del bot贸n */
     font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
-    font-size: 24px; /* Tama駉 de fuente m醩 grande */
+    font-size: 24px; /* Tama帽o de fuente m谩s grande */
 }
 
 @font-face {
     font-family: 'vhs'; /* Un nombre para tu fuente personalizada */
-    src: url('fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Cambia la ruta y el formato seg鷑 tu fuente */
+    src: url('fonts/VCR_OSD_MONO.ttf') format('truetype'); /* Cambia la ruta y el formato seg煤n tu fuente */
     font-weight: normal;
     font-style: normal;
 }
@@ -92,7 +92,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: fadeOut 0.2s ease-out 1s forwards; /* Animaci髇 de desvanecimiento */
+    animation: fadeOut 0.2s ease-out 1s forwards; /* Animaci贸n de desvanecimiento */
 }
 
 .inicio-gif img {
@@ -112,13 +112,22 @@ body {
 
 .reloj {
     position: fixed;
-    top: 10px; /* Ajusta la posici髇 vertical seg鷑 tus preferencias */
-    right: 10px; /* Ajusta la posici髇 horizontal seg鷑 tus preferencias */
+    top: 65px;
+    right: 10px;
     font-size: 18px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
-    font-family: 'vhs', sans-serif; /* Usa la fuente personalizada */
-    font-size: 34px; /* Tama駉 de fuente m醩 grande */
+    font-family: 'vhs', sans-serif;
+    font-size: 34px;
+}
+
+.hover img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    pointer-events: none;
 }
