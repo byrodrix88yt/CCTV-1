@@ -7,6 +7,12 @@
     <title>Luminora Hospital - Security System * Online...</title>
 </head>
 <body>
+    <div class="hover">
+        <a target="_blank">
+            <img src="images/hover.png" alt="images/hover.png">
+        </a>
+    </div>
+
    <div class="fondo">
     <div class="boton-custom">
         <a target="_blank">
@@ -50,17 +56,17 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        // Obtén el elemento de audio
+        // ObtÃ©n el elemento de audio
         const audio = document.getElementById('audio');
 
         // Reproduce el sonido
         audio.play();
 
-        // Después de 2 segundos, oculta el elemento del GIF de inicio
+        // DespuÃ©s de 2 segundos, oculta el elemento del GIF de inicio
         setTimeout(() => {
             const inicioGif = document.querySelector('.inicio-gif');
             inicioGif.style.display = 'none';
-        }, 3584000); // Cambia el valor de 2000 a la duración de tu sonido en milisegundos
+        }, 3584000); // Cambia el valor de 2000 a la duraciÃ³n de tu sonido en milisegundos
     });
 </script>
 
@@ -81,6 +87,6 @@
     // Actualiza el reloj cada segundo
     setInterval(actualizarReloj, 1000);
 
-    // Llama a la función una vez para mostrar la hora de inmediato
+    // Llama a la funciÃ³n una vez para mostrar la hora de inmediato
     actualizarReloj();
 </script>
