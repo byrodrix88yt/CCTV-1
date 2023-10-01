@@ -50,17 +50,14 @@
 
 <script>
     window.addEventListener('DOMContentLoaded', (event) => {
-        // Obtén el elemento de audio
         const audio = document.getElementById('audio');
 
-        // Reproduce el sonido
         audio.play();
 
-        // Después de 2 segundos, oculta el elemento del GIF de inicio
         setTimeout(() => {
             const inicioGif = document.querySelector('.inicio-gif');
             inicioGif.style.display = 'none';
-        }, 3584000); // Cambia el valor de 2000 a la duración de tu sonido en milisegundos
+        }, 3584000);
     });
 </script>
 
@@ -72,15 +69,12 @@
     const minutos = ahora.getMinutes().toString().padStart(2, '0');
     const ampm = horas >= 12 ? 'PM' : 'AM';
 
-    // Convierte las horas a formato de 12 horas
     horas = horas % 12 || 12;
 
     reloj.textContent = `${horas}:${minutos} ${ampm}`;
 }
 
-    // Actualiza el reloj cada segundo
     setInterval(actualizarReloj, 1000);
 
-    // Llama a la función una vez para mostrar la hora de inmediato
     actualizarReloj();
 </script>
