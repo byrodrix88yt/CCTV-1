@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Luminora Hospital - Security System * Online...</title>
+</head>
+<body>
+   <div class="fondo">
+    <div class="boton-custom">
+        <a target="_blank">
+            <img src="images/next15.png" alt="images/next15.png">
+            <span></span>
+        </a>
+    </div>
+
+    <div class="boton-custom2">
+        <a href="https://www.ejemplo.com/" target="_blank">
+            <span><<</span>
+        </a>
+    </div>
+
+    <div class="boton-custom3">
+        <a href="https://www.youtube.com/@Byrodrix_88YT/about" target="_blank">
+            <span>>></span>
+        </a>
+    </div>
+
+    <div class="inicio-gif">
+        <img src="images/test.gif" alt="images/test.gif">
+    </div>
+
+    <audio id="audio" autoplay>
+        <source src="sounds/static_start.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio" autoplay loop>
+        <source src="sounds/loop_static.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="reloj">
+        <span id="hora"></span>
+        <span id="fecha"></span>
+    </div>
+
+</div>
+</body>
+</html>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Obtén el elemento de audio
+        const audio = document.getElementById('audio');
+
+        // Reproduce el sonido
+        audio.play();
+
+        // Después de 2 segundos, oculta el elemento del GIF de inicio
+        setTimeout(() => {
+            const inicioGif = document.querySelector('.inicio-gif');
+            inicioGif.style.display = 'none';
+        }, 3584000); // Cambia el valor de 2000 a la duración de tu sonido en milisegundos
+    });
+</script>
+
+<script>
+    function actualizarReloj() {
+    const reloj = document.getElementById('hora');
+    const ahora = new Date();
+    let horas = ahora.getHours();
+    const minutos = ahora.getMinutes().toString().padStart(2, '0');
+    const ampm = horas >= 12 ? 'PM' : 'AM';
+
+    // Convierte las horas a formato de 12 horas
+    horas = horas % 12 || 12;
+
+    reloj.textContent = `${horas}:${minutos} ${ampm}`;
+}
+
+    // Actualiza el reloj cada segundo
+    setInterval(actualizarReloj, 1000);
+
+    // Llama a la función una vez para mostrar la hora de inmediato
+    actualizarReloj();
+</script>
