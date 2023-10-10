@@ -1,0 +1,358 @@
+body {
+    background-image: url('images/pc_off.png'); /* Cambia 'imagen1.jpg' por la ruta de tu imagen de fondo inicial */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    width: 47px; /* Ancho deseado en píxeles */
+    height: 50px; /* Alto deseado en píxeles */
+    line-height: 40px; /* Igualar la altura del texto al alto del botón */
+    top: 74%; /* Centra verticalmente */
+    left: 59.3%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Corrige el centrado para que el centro del botón esté en el centro de la página */
+}
+
+#screen {
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.boton-secundario {
+    display: none;
+    background-color: transparent;
+    margin: 10px; /* Agrega un margen alrededor de cada botón */
+    padding: 5px 10px; /* Ajusta el relleno interno del botón */
+    font-size: 16px;
+}
+
+#boton1 { /* recycle bin */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    width: 10px; /* Ancho deseado en píxeles */
+    height: 28px; /* Alto deseado en píxeles */
+    line-height: 40px; /* Igualar la altura del texto al alto del botón */
+    top: 17%; /* Centra verticalmente */
+    left: 37.5%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+#boton2 { /* cctv */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    width: 10px; /* Ancho deseado en píxeles */
+    height: 28px; /* Alto deseado en píxeles */
+    line-height: 40px; /* Igualar la altura del texto al alto del botón */
+    top: 24%; /* Centra verticalmente */
+    left: 37.5%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+#boton3 { /* file explorer */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    width: 10px; /* Ancho deseado en píxeles */
+    height: 28px; /* Alto deseado en píxeles */
+    line-height: 40px; /* Igualar la altura del texto al alto del botón */
+    top: 32.5%; /* Centra verticalmente */
+    left: 37.5%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+#boton4 { /* internet */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    width: 10px; /* Ancho deseado en píxeles */
+    height: 28px; /* Alto deseado en píxeles */
+    line-height: 40px; /* Igualar la altura del texto al alto del botón */
+    top: 40%; /* Centra verticalmente */
+    left: 37.5%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+#win { /* windows */
+    padding: 10px 20px;
+    font-size: 1px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    width: 58px; /* Ancho deseado en píxeles */
+    height: 5px; /* Alto deseado en píxeles */
+    line-height: 1px; /* Igualar la altura del texto al alto del botón */
+    top: 63%; /* Centra verticalmente */
+    left: 35.35%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%);
+}
+
+.reloj {
+    position: fixed;
+    display: none;
+    bottom: 10px;
+    top: 63.5%;
+    letter-spacing: -1px;
+    left: 1190px;
+    font-size: 14px;
+    color: #000;
+    font-family: 'vhs', sans-serif;
+}
+
+@font-face {
+    font-family: 'vhs';
+    src: url('fonts/VCR_OSD_MONO.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 3/10/23 */
+
+.movible {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 200;
+}
+
+#seguirBoton {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 250;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    top: 63%;
+    left: 155.35%;
+    background-color: transparent;
+}
+
+.movible2 {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 50;
+}
+
+#seguirBoton2 {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 250;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    top: 63%;
+    left: 155.35%;
+    background-color: transparent;
+}
+
+#fe_downloads {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 350;
+    font-size: 1px;
+    width: 10px;
+    height: 30px;
+    top: 13%;
+    left: 155.35%;
+    background-color: transparent;
+}
+#a1_files {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 350;
+    font-size: 1px;
+    width: 10px;
+    height: 30px;
+    top: 13%;
+    left: 155.35%;
+    background-color: transparent;
+}
+
+#a2_files {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 350;
+    font-size: 1px;
+    width: 10px;
+    height: 30px;
+    top: 13%;
+    left: 155.35%;
+    background-color: transparent;
+}
+
+#fe_download_goback {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 550;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    top: 19.3%;
+    left: 47%;
+    background-color: transparent;
+}
+
+#fe_a1_goback {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 753;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    top: 19.3%;
+    left: 47%;
+    background-color: transparent;
+}
+
+#imageapp1 {
+    z-index: 10;
+}
+#imageapp2 {
+    z-index: 10;
+}
+
+@keyframes escalar {
+    from {
+        transform: scale(0) translate(10px, -200px); /* Escala inicial y desplazamiento (centro) */
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translate(0px, 0px); /* Escala final y desplazamiento (centro) */
+        opacity: 1;
+    }
+}
+
+.aparecer {
+    animation-name: escalar;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+}
+
+@keyframes escalar2 {
+    from {
+        transform: scale(1) translate(0px, 0px); /* Escala final y desplazamiento (centro) */
+        opacity: 1;
+    }
+    to {
+        transform: scale(0) translate(10px, -200px); /* Escala inicial y desplazamiento (centro) */
+        opacity: 0;
+    }
+}
+
+#searchbar {
+    width: 115px;
+    height: 12px;
+    background-color: transparent;
+    resize: none;
+    border: none;
+    outline: none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: hidden; 
+    font-family: 'vhs', sans-serif;
+    cursor: text;
+}
+
+#a1_protected_file {
+    position: absolute;
+    z-index: 749;
+    top: 0%;
+    left: 35%;
+    pointer-events: none;
+}
+
+#a1_protected_file_wrong {
+    position: absolute;
+    z-index: 750;
+    top: 0%;
+    left: 35%;
+    pointer-events: none;
+}
+
+#close_protected_file {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    z-index: 751;
+    font-size: 1px;
+    top: 17%;
+    left: 56.5%;
+    border-radius: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+#a1_password {
+    width: 205px;
+    height: 22px;
+    top: 39%;
+    left: 44.5%;
+    background-color: transparent;
+    resize: none;
+    border: none;
+    outline: none;
+    z-index: 752;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: hidden; 
+    font-family: 'vhs', sans-serif;
+    cursor: text;
+}

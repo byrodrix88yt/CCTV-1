@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shieven ARG: Desktop</title>
+    <link rel="stylesheet" href="pc1.css">
+  <style>
+    /* Estilos para el modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150%;
+      background-color: transparent;
+      z-index: 1550;
+    }
+    .modal-content {
+      background-color: white;
+      width: 300px;
+      top: 500px;
+      right: -500px;
+      padding: 20px;
+      position: relative;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <button id="cambiarFondo">ㅤ</button>
+        <button class="boton-secundario" id="boton1"></button>
+        <button class="boton-secundario" id="boton2"></button>
+        <button class="boton-secundario" id="boton3"></button>
+        <button class="boton-secundario" id="boton4"></button>
+        <button class="boton-secundario" id="win"></button>
+        <button class="movible" id="seguirBoton" style="display: none;"></button>
+        <img src="images/recycle_bin_app.png" alt="Imagen Movible" id="imagenMovible" class="movible" style="display: none;">
+        <button class="movible2" id="seguirBoton2" style="display: none;"></button>
+        <button class="movible2" id="fe_download_goback" style="display: none;"></button>
+        <button class="movible2" id="fe_a1_goback" style="display: none;"></button>
+        <button class="movible3" id="fe_downloads" style="display: none;"></button>
+        <button class="movible3" id="a1_files" style="display: none;"></button>
+        <button class="movible3" id="a2_files" style="display: none;"></button>
+        <img src="images/file_explorer_app.png" alt="Imagen Movible2" id="imagenMovible2" class="movible2" style="display: none;">
+        <img id="imagendownloads" src="images/fe_downloads.png" alt="Imagen downloads" style="display: none;">
+        <img id="fe_a1_files" src="images/fe_a1_files.png" alt="Imagen a1_files" style="display: none;">
+        <img src="images/fe_app_down.png" alt="Imagen Movible2" id="imageapp1" class="movible2" style="display: none;">
+        <img src="images/fe_protected_file.png" alt="protected_file" id="a1_protected_file" class="movible2" style="display: none;">
+        <img src="images/fe_protected_file_wrong.png" alt="protected_file" id="a1_protected_file_wrong" class="movible2" style="display: none;">
+        <button class="movible3" id="close_protected_file" style="display: none;"></button>
+        <img src="images/rb_app_down.png" alt="Imagen Movible" id="imageapp2" class="movible" style="display: none;">
+        <textarea class="movible2" id="searchbar" placeholder="Search..." style="display: none;"></textarea>
+        <textarea class="movible2" id="a1_password" placeholder="Password" style="display: none;"></textarea>
+    </div>
+    <div class="reloj" id="reloj"></div>
+    <script src="pc1.js"></script>
+</body>
+</html>
+
+<script>
+var searchbar = document.getElementById("searchbar");
+var mensajeLimite = document.getElementById("mensajeLimite");
+
+searchbar.addEventListener("input", function () {
+    var textoIngresado = searchbar.value;
+    var caracteresRestantes = 14 - textoIngresado.length;
+    
+    if (caracteresRestantes < 0) {
+        searchbar.value = textoIngresado.slice(0, 14);
+        caracteresRestantes = 0;
+    }
+    var input = document.getElementById("input");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+      }
+    });
+
+    mensajeLimite.textContent = "Caracteres restantes: " + caracteresRestantes;
+});
+</script>
+
+
+<script>
+var a1_password = document.getElementById("a1_password");
+var mensajeLimite = document.getElementById("mensajeLimite");
+
+a1_password.addEventListener("input", function () {
+    var textoIngresado = a1_password.value;
+    var caracteresRestantes = 26 - textoIngresado.length;
+    
+    if (caracteresRestantes < 0) {
+        a1_password.value = textoIngresado.slice(0, 26);
+        caracteresRestantes = 0;
+    }
+    var input = document.getElementById("input");
+
+    input.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+      }
+    });
+
+    mensajeLimite.textContent = "Caracteres restantes: " + caracteresRestantes;
+});
+</script>
